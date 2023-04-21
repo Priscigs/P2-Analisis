@@ -54,7 +54,7 @@ def time_collector():
         lcs_divide_conquer(s1=lists[0], s2=lists[1], show_dac=False)
         end_time_dac = time.time()
         total_time_dac = end_time_dac - start_time_dac
-
+        
         key = str(len(lists[0]))
         time_dictionary.update({key: {'d': total_time_d, 'dac': total_time_dac}})
 
