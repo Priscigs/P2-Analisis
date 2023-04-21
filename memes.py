@@ -1,4 +1,7 @@
-def lcs_dynamic(string1, string2):
+import time
+import matplotlib.pyplot as plt
+
+def lcs_dynamic(string1, string2, show=True):
     string1 = string1.upper()
     string2 = string2.upper()
     lx, ly = len(string1), len(string2)
@@ -29,12 +32,13 @@ def lcs_dynamic(string1, string2):
         else:
             ly -= 1
 
-    print(string1, "<>", string2)
-    print("LCS:", "".join(lsc), "\n")
+    if show:
+        print(string1, "<>", string2)
+        print("LCS:", "".join(lsc), "\n")
     return "".join(lsc)
 
 
-def lcs_divide_conquer(s1, s2, memo=None):
+def lcs_divide_conquer(s1, s2, memo=None, show_dac=False):
     s1 = s1.upper()
     s2 = s2.upper()
 
@@ -50,11 +54,16 @@ def lcs_divide_conquer(s1, s2, memo=None):
     if s1[-1] == s2[-1]:
         lcs = lcs_divide_conquer(s1[:-1], s2[:-1], memo) + s1[-1]
     else:
-        lcs1 = lcs_divide_conquer(s1[:-1], s2, memo)
-        lcs2 = lcs_divide_conquer(s1, s2[:-1], memo)
+        lcs1 = lcs_divide_conquer(s1[:-1], s2, memo, show_dac)
+        lcs2 = lcs_divide_conquer(s1, s2[:-1], memo, show_dac)
         lcs = max(lcs1, lcs2, key=len)
 
     memo[(len(s1), len(s2))] = lcs
-    print(s1, "<>", s2)
-    print("LCS:", lcs, "\n")
+    if show_dac:
+        print(s1, "<>", s2)
+        print("LCS:", lcs, "\n")
     return lcs
+
+if __name__ == '__main__':
+    lcs_dynamic("amapolas", "matamoscas", show=True)
+    lcs_divide_conquer("amapolas", "matamoscas", show_dac=True)
