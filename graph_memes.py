@@ -4,6 +4,7 @@ from memes import lcs_divide_conquer
 import time
 import matplotlib.pyplot as plt
 
+
 strings = [["R9s8GyV6tJ42wMqQ7EoKjDZ3c1hH5xX0fPnBmUaIvLz4YbArFk", "xP4m7vYhD0J9zN5L8tWg6BfQ3eA1jSlE2oUqKwM_RiXpCnVbHc"],
            ["uzxjkgnecijjbgnkgmlfsygyqvokheiefhalsdxcouamrekhncmyxovybsnn", "jfpyzbsbsrskhjrmrqckbipisfvkvlyozomzmkrqkbmcjpcxzysmdcctyntv"],
            ["epwogmmgwpqiekeevvgaqpdvbdyfcqtkfxwlvrghuczyavjaupkqpiibgecngjcoojrkdw", "vlfqszcepqduhrzxwrijqddlyuxbxdvpoefpaajyoyfcdfypqyknpchtypbkleczqcurdl"],
@@ -42,6 +43,8 @@ strings = [["R9s8GyV6tJ42wMqQ7EoKjDZ3c1hH5xX0fPnBmUaIvLz4YbArFk", "xP4m7vYhD0J9z
            ["uxsysjxzttvtyyvhnkkeluiqbazfutjryhrwyhavbshxqeomdswgceexdsleilthxezmansrkwllfcmzclptokgvwtopownkqfjzwtgxmtrudkwsikzyprqnlfzeyzcmxkkeowzxchgooowkcdeuperdyryjjkwlopgimradxfldkhmkgtsmkexlyxguajsbizpeyynhrsrpaqjcyhbgokoqkmhywwpprxyryckaarbuxofhpbhpnbiwegeellczqzfeihekmowaexvheasiorfhimqcccbmxooxakxnkahqvsflsprzauekwaqfodjnqpwqskcsvpasurtaxfethussmzneozyiweyeattfqpydeswxibleowsbytllobngegylooxhnxlpqpcj", "wmsncmfbghladduapglusfyrfownttqfakkalwxzhucrdspbozzstzanriyyqpophrztbucrjyanskihjxjjscdnrrpvqcbepkyuwzsvwjcxdnihipijqppbszympjnultmmoubmddhnujfddrilalwlnknfwrumdrgmqowhtfufqcupwdbjqwhrmjtrulwheofiehradmhbylxosgedpejkasddwtxdygyhdtiikrvazfbuswbioqukkbqslegkxckcciqwrxkenvajstjqxtkrpqvlxrghobbgffkigurzchzhdhacorgkarpqqqllimrxmjscagxnmcyowpzmuepwhfdkqygicxxwzsxozjeagaugsliirkracjklynuyfugtzhgbfethexwp"],
            ]
 
+
+
 def time_collector():    
     time_dictionary = {}
     for lists in strings:
@@ -69,6 +72,7 @@ def time_collector():
 
     plt.legend()
     plt.show()
+
 
 if __name__ == '__main__':
     time_collector()
